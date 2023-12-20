@@ -65,20 +65,22 @@ function StudentPaymentStatus({ userId }) {
         paddingBottom: "10px",
       }}
     >
-      <div>
-        <h2 style={{ marginTop: "30px", padding: "50px" }}>MY BALANCE</h2>
-      </div>
-      <div>
-        {isLoading ? (
-          <Loader />
-        ) : (
-          <DataTable
-            columns={columns}
-            data={paymentStatus}
-            pagination
-            customStyles={customStyles}
-          />
-        )}
+      <div className="table-container">
+        <div>
+          <h2 style={{ marginTop: "30px", padding: "50px" }}>MY BALANCE</h2>
+        </div>
+        <div>
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <DataTable
+              columns={columns}
+              data={paymentStatus}
+              pagination
+              customStyles={customStyles}
+            />
+          )}
+        </div>
       </div>
     </div>
   );
